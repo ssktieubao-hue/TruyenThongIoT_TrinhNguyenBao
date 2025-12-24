@@ -1,0 +1,117 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eef1f4;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Căn giữa màn hình cho đẹp */
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+}
+
+.main-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px; /* Bo tròn mềm mại hơn */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px; /* Đã thu nhỏ lại cho vừa vặn với 2 thẻ */
+    text-align: center;
+}
+
+header h1 { 
+    color: #333; 
+    margin: 0 0 5px 0; 
+}
+
+header p { 
+    color: #777; 
+    margin: 0 0 25px 0; 
+    font-size: 0.9em; 
+}
+
+.hidden { display: none; }
+
+/* --- Controls Panel --- */
+.controls-panel {
+    display: flex;
+    flex-direction: column; /* Xếp dọc nút và trạng thái cho gọn */
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%; /* Nút bấm full chiều ngang */
+}
+
+.btn-connect { background-color: #2ecc71; color: white; }
+.btn-connect:hover { background-color: #27ae60; }
+
+.btn-disconnect { background-color: #e74c3c; color: white; }
+.btn-disconnect:hover { background-color: #c0392b; }
+
+.status-text {
+    color: #7f8c8d;
+    font-size: 14px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* --- Sensor Cards --- */
+.sensor-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cột bằng nhau */
+    gap: 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Xếp icon lên trên, số ở dưới */
+    align-items: center;
+    justify-content: center;
+    padding: 25px 15px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card.temp { background: linear-gradient(135deg, #ff6b6b, #ee4343); }
+.card.hum { background: linear-gradient(135deg, #577bff, #3a5edb); }
+
+.icon-box {
+    font-size: 32px;
+    margin-bottom: 10px; /* Cách số liệu ra một chút */
+    width: auto;
+    margin-right: 0;
+}
+
+.info h3 { 
+    margin: 0; 
+    font-size: 14px; 
+    opacity: 0.9; 
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.info p.value { 
+    margin: 5px 0 0; 
+    font-size: 28px; 
+    font-weight: bold; 
+}

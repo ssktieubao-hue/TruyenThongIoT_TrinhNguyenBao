@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌡️ Dashboard DHT11 Real-time</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+<body>
+
+    <div class="main-container">
+        <header>
+            <h1>IoT Dashboard</h1>
+            <p>Dữ liệu Nhiệt độ & Độ ẩm từ Arduino/Bluetooth</p>
+        </header>
+
+        <div class="controls-panel">
+            <button id="btnConnect" class="btn btn-connect"><i class="fa-solid fa-link"></i> Kết nối Serial/Bluetooth</button>
+            <button id="btnDisconnect" class="btn btn-disconnect hidden"><i class="fa-solid fa-unlink"></i> Ngắt kết nối</button>
+            <div id="status" class="status-text">Trạng thái: Chưa kết nối</div>
+        </div>
+
+        <div class="sensor-grid">
+            <div class="card temp">
+                <div class="icon-box">
+                    <i class="fa-solid fa-temperature-three-quarters"></i>
+                </div>
+                <div class="info">
+                    <h3 class="label">Nhiệt độ (T)</h3>
+                    <p class="value"><span id="tempVal">0.0</span> °C</p>
+                </div>
+            </div>
+
+            <div class="card hum">
+                <div class="icon-box">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+                <div class="info">
+                    <h3 class="label">Độ ẩm (H)</h3>
+                    <p class="value"><span id="humVal">0.0</span> %</p>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
